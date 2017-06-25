@@ -1,0 +1,19 @@
+{
+  "contributors": [
+    {
+      "name": "andrew yoon",
+      "slug": "andrew-yoon",
+      "blurb": "makes music and poems with code sometimes",
+      "links": [
+        {
+          "name": "website",
+          "url": "http://andrewjyoon.com"
+        },
+        {
+          "name": "email",
+          "url": "mailto:andrewyoon2@gmail.com"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {% include head.html %}
+
+  <body>
+    <div id="top-border"></div>
+    <div id="vertical-line"></div>
+    {% include header.html %}
+
+      <div class="centered-wrapper">
+        <div class="wrapper">
+          <main class="page-content" aria-label="Content">
+            {{ content }}
+          </main>
+        </div>
+      </div>
+
+    {% include footer.html %}
+
+  </body>
+  {% include randomLines.html %}
+</html>

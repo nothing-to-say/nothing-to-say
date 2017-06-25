@@ -1,0 +1,42 @@
+<script>
+ function randomFloat(min, max) {
+   if (max < min) {
+     return min;
+   }
+   return Math.floor(Math.random() * (max - min)) + min;
+ }
+
+ function getRandomLineGradient(minAngle, maxAngle, minHeight, maxHeight, lineColor) {
+   console.log(arguments);
+   let height = randomFloat(minHeight, maxHeight);
+   return 'linear-gradient('
+        + randomFloat(minAngle, maxAngle) + 'deg, '
+        + 'rgba(0, 0, 0, 0) 0%, '
+        + 'rgba(0, 0, 0, 0) calc(' + height + '% - 0.9px), '
+        + lineColor + ' 50%, '
+        + 'rgba(0, 0, 0, 0) calc(' + height + '% + 0.9px), '
+        + 'rgba(0, 0, 0, 0) 100%) ';
+ }
+
+ function createLines(backgroundColor, lineColor) {
+   let numLines = Math.floor(randomFloat(3, 8));
+   let lineStrings = [];
+   for (var i = 0; i < numLines; i++) {
+     let progress = i / numLines;
+     lineStrings.push(
+       getRandomLineGradient(
+         Math.round(progress * -20),
+         Math.round(progress * 10),
+         Math.round((1 - progress) * 50) + 50,
+         100 - progress,
+         lineColor
+       )
+     );
+   }
+   return lineStrings.join(', ');
+ }
+ document.body.style.backgroundImage = createLines(
+   window.getComputedStyle(document.getElementById('vertical-line')).backgroundColor,
+   window.getComputedStyle(document.getElementById('vertical-line')).borderRightColor
+ );
+</script>

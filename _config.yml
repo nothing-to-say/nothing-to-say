@@ -1,0 +1,13 @@
+title: nothing to say
+description: >
+  thoughts on art
+baseurl: ""
+url: "http://nothing-to-say.org"
+source_url: "https://github.com/nothing-to-say/nothing-to-say"
+
+permalink: /:categories/:year/:month/:title.html
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-feed
