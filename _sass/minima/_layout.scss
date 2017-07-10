@@ -1,5 +1,6 @@
 body {
   position: relative;
+  background-size: cover;
 }
 
 #top-border {
@@ -78,6 +79,7 @@ body {
  * Site footer
  */
 .site-footer {
+  background: $background-color;
   border-top: 1px solid $grey-color-light;
   padding: $spacing-unit 0;
   color: grey;
