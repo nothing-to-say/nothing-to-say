@@ -1,0 +1,43 @@
+---
+layout: post
+title: "trading passive verbs"
+author: "andrew yoon"
+author_slug: "andrew-yoon"
+date: 2017-06-01
+issue: 1
+permalink: /issues/1/trading-passive-verbs.html
+include_bml: "true"
+---
+
+<div id="bml-target"></div>
+
+
+
+
+<script>
+ var HttpClient = function() {
+     this.get = function(aUrl, aCallback) {
+         var anHttpRequest = new XMLHttpRequest();
+         anHttpRequest.onreadystatechange = function() {
+             if (anHttpRequest.readyState == 4 && anHttpRequest.status == 200)
+                 aCallback(anHttpRequest.responseText);
+         }
+
+         anHttpRequest.open( "GET", aUrl, true );
+         anHttpRequest.send( null );
+     }
+ }
+ var client = new HttpClient();
+ client.get('/assets/unique/the_pitch_of_passive_verbs.bml',
+            function(response) {
+                document.getElementById("bml-target").innerHTML = bml(response);
+            });
+</script>
+<noscript>
+    this document uses javascript to generate stochastic content.
+    please consider enabling javascript for this domain. 
+    if you really don't want to, drop me a line at 
+    <a href="mailto:admin@nothing-to-say.org">admin@nothing-to-say.org</a>
+    and next weekend i'll figure out a graceful fallback mechanism i guess.
+</noscript>
+

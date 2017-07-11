@@ -1,0 +1,24 @@
+---
+layout: default
+---
+
+<h1 class="page-heading">issues</h1>
+
+<ul class="issues-list">
+    {% for issue in site.data.issues.issues %}
+    <li>
+        <a href="/issues/{{ issue.number }}.html">
+            <h3 class="issue-title">{{ issue.number }}: {{ issue.title }}</h3>
+        </a>
+        <span class="issue-meta">{{ issue.date }}</span>
+        <p class="issue-contributor-list">
+            by
+            {% assign issue_posts = site.posts | where: "issue", issue.number %}
+            {% comment %} This assumes no contributor has > 1 submission per issue {% endcomment %}
+            {% for post in issue_posts %}
+                {{ post.author}}{% if forloop.last == false %}, {% endif %}
+            {% endfor %}
+        </p>
+    </li>
+    {% endfor %}
+</ul>
