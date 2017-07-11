@@ -1,0 +1,19 @@
+{
+  "name": "nothing-to-say",
+  "version": "1.0.0",
+  "description": "this is the source code for [nothing-to-say.org](http://nothing-to-say.org) hosted through github pages. it is built with the static site generator [jekyll](https://jekyllrb.com/) and is based on the [minima](https://github.com/jekyll/minima) theme.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nothing-to-say/nothing-to-say.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nothing-to-say/nothing-to-say/issues"
+  },
+  "homepage": "https://github.com/nothing-to-say/nothing-to-say#readme"
+}

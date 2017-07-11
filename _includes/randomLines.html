@@ -1,9 +1,9 @@
 <script>
  function randomFloat(min, max) {
-   if (max < min) {
-     return min;
-   }
-   return Math.floor(Math.random() * (max - min)) + min;
+     if (max < min) {
+         return min;
+     }
+     return Math.floor(Math.random() * (max - min)) + min;
  }
 
  function randomSvgLine(minStartY, maxStartY, minEndY, maxEndY, lineColor) {
@@ -43,3 +43,5 @@
    window.getComputedStyle(document.getElementById('vertical-line')).borderRightColor
  );
 </script>
+
+
