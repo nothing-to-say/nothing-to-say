@@ -202,4 +202,10 @@ body {
   p {
     margin-bottom: 0;
   }
+  .contributor-name {
+    font-style: italic;
+  }
+  .contributor-details {
+    margin-left: $spacing-unit;
+  }
 }
