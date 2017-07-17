@@ -29,6 +29,25 @@ body {
   }
 }
 
+
+ul {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 1em;
+  text-indent: -1em;
+  li:before {
+    content: '» ';
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  li {
+    margin-bottom: 0.5em;
+    &last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
 /**
  * Site header
  */
