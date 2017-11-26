@@ -1,0 +1,180 @@
+evaluate {
+  settings = {
+    renderMarkdown: true,
+    markdownSettings: {
+      smartypants: true
+    }
+  };
+  function invertCaps(match, string, index) {
+    if (match[0] === match[0].toUpperCase()) {
+      return match[0].toLowerCase();
+    } else {
+      return match[0].toUpperCase();
+    }
+  }
+}
+mode main {
+  '.' as '?' 1
+  '?' as '.' 0.4
+  ',' as ',,\n\n<span width="1em"></span>' 1,
+         ',,' 2,
+         ',,,' 3
+  r'\s[a-zA-Z]' as call invertCaps 0.1
+  r'[^A-z]yes[^A-z]' as 'no' 20
+  r'[^A-z]no[^A-z]' as 'yes' 25
+  r'[^A-z]have[^A-z]', 'haven\'t' as 'have', 'haven\'t'
+  r'[^A-z]not[^A-z]' as '' 20
+}
+
+begin using main
+
+we remember hearing a radio recording of a conversation between two old friends.
+they are not talking about anything in particular; there is no script, no
+plan. there are these long pauses in speech which almost feel uncomfortable
+without seeing the body language we imagine they expressed, without being there in the
+room with them and experiencing their ritual of lighting cigarettes in the
+studio. their pauses were the type we remember from that time we went to the
+park at four in the morning and sat on the bleachers for a while. even the
+{{'geese', 'ducks'}} were {{'at least pretending to sleep', 'asleep'}}.
+
+the friends went for hours on end. the sort of off-the-cuff remarks they tossed
+out _("when do we leave?")_ are the type that have caused revolutions, revolts,
+restaurants. one would murmur the most profound thought and the other would
+comment on how to forage for a particular species of mushrooms. the non sequitur
+passes by unnoticed, we just want to know what kind of spots to look out for.
+they joke and they laugh, they mention the Vietnam war and we feel a strange
+sense of guilt. one feels it was his responsibility while the other does too,
+but differently. they don't argue, they simply state their opinions and ask questions.
+they are interested in learning what they don't know---they're friends, after all.
+we wonder how
+different things might be if, instead of going to church on sundays we had
+coffee with friends and contact microphones.
+
+what might a chord progression look like in a conversation? the dominant, the
+tonic, straying from home and {{'ending back where we started', 'never looking
+back'}}. can't we see? it's not a metaphor, it's the real {{'mccoy', 'slim
+shady'}}.
+
+the anitphonal: two choirs taking turns, questioning each other, interjecting,
+responding. a dialectic and so much more. the st. matthew passion: not only two
+choirs but two _orchestras_, and within each of these four groups countless
+voices contributing their thoughts, their ideas, their fears, hopes,
+observations, desires. knowing german helps, but being alive comes first. having
+fought with someone we care about comes first. having sat in the park at four in
+the morning comes first.
+
+we feel sometimes that we overlook theater. compare the typesetting of typical
+theatrical works with those of conventionally notated operas: the composer is
+obsessed with time, painstakingly coordinating hundreds of thousands of events
+down to 50ms intervals. crosstalk is indicated with metric intersections,
+breathlessness with subdivisions and _mezzo forte_. the composer sits in front
+of their keyboard for hours reading aloud a monologue and transcribing its
+flow in time until it is exactly the way they {{'hear', ''}} it. meanwhile,
+the playwright doesn't say a thing---the text speaks for itself. when crosstalk
+really is important, a simple [[`/`]] may be inserted at the point of interruption.
+when things get really complicated the text may even be divided into columns
+interspersed with stage directions written in italics.
+
+the spoken-word poet, too, is intensely concerned with delivery. they write
+with their own voice in mind, {{'but', 'and' 60}} others can read them just as well.
+here, typographical techniques suggest semantic twists in the words.
+[[Emily Dickinson]] did not capitalize the nouns she did by accident. but these ways of
+organizing text in a visual language are far less defined. they say, _"this
+text is different"_, and little more. 
+
+we remember seeing a poem written as a single block of text in tiny
+sans-serif sprawling across an eight foot scroll of paper {{'clumsily', ''}}
+taped together and hung on the wall. it was about being at a house party or
+something; there was not a single indication of how it was to be performed.
+[[_"he stood up and read this at the cafe; it took over forty-five minutes."_]]
+
+why is it that the wordwriter can get away with defining so little? why is it
+that the composer is expected to paint the canvas so frame-by-frame? what confuses
+us the most is just how closely intertwined wordsmiths and composers were from
+the get-go---smothered in the same cultural afterbirth. _power_, and so on.
+at some point we started doing things differently. is music that much
+more complicated that it needs such meticulous specification and detail to
+prevent it from falling apart? are words so specific and connotative that
+we have such a mutual understanding of the way things are?
+
+our ears have learned. _"it is the harmony that matters"_, _"it is the
+timbre that matters"_, _"it is the words that matter"_. why can't we see that,
+in the end, it all matters? we listen, drunk on bad whiskey, and hear so many
+things, yet nothing at all. these senses pass us by and our perceptions filter
+nicely what we expect to perceive. what we want to perceive.
+we forget that we left the noise-cancelling headphones on, and that they are draining
+our triple-A batteries that we bought from that nice person at the corner store.
+everything is muffled---distant. maybe some day we'll finally look back and think
+about this ceiling fan spinning above us while we listen to the music of a person
+we wonder might have a soul like our own.
+
+[[_it is the experience that matters._]]
+
+we've thought about this before. the way this shadow on the tile wall outlines
+a strange shape sticking out of our hair. the way there is a bit of toothpaste
+stuck on the basin of our bathroom sink. the way we've forgotten.
+
+our ears have been taught a bias. [[structure rears its ugly head again.]]
+we expect that words have meaning and music has
+feeling. that each has their intention, their place, but different ones.
+that one lays out arguments while the other waits to hear them.
+we suggest that this doesn't have to be, that both do both.
+
+we suggest a counterpoint. a ceiling fan. it only keeps us
+cool on hot summer days when our eyes have difficulty focusing on what we are 
+writing. what we are. we look on our mistakes and don't see a thing, and not in
+a metaphorical sense. never in a metaphorical sense.
+
+simile: a way to hide. {{'\n\n' 20, ''}} a way to go to sleep for the night; hardly able to type but fully able
+to live. better or worse being the greatest fallacy. we just are. all these words
+and so little to show for it except a new feature in a credit card processing
+system in a company which obsensibly strives to empower restaurant owners but
+cannot escape the relentless goals of society. how strange that these
+people have decided their purpose is to make money, to increase the size of a number.
+to be respected. but that may be us trying to contextualize our own choices.
+
+every day we ask: have we made a mistake? it is, by necessity, a mistake.
+a mistake which makes us who we are. the most noble choice imaginable. we
+wonder if any person has ever done something truly wrong. if we have ever done
+something truly wrong; because _wrong_ implies something else, something nonsensicle:
+to go against our nature.
+
+-----------
+
+<style>
+.c-left {
+    width: 30%;
+}
+.c-right {
+    width: 30%;
+    margin-left: {{'40%' 70, '50%'}};
+}
+</style>
+
+<div class="c-left">
+we hear a Sound and somehow the ceiling fan is blowing
+that much faster. a sine wave, it is maroon. a sound of a word
+</div>
+<div class="c-right" style="margin-left: 50%">
+a sound. a sound. a sound and again the timestructures walking.
+</div>
+<div class="c-left">
+being sung except it isn't a word being sung and we can tell
+this from a sort of scratchiness it has to it.
+we squint our left eyelid and try to remember and then we squint both.
+the,,,,Againinsong? no. the leatherclasp. it is holding shut a
+</div>
+<div class="c-right">
+the structures walk walking and ,,, waits. who again the youandi?
+oh nevermind, forget about it.
+</div>
+<div class="c-left" style="margin-left: 10%">
+little container of those tiny loudspeakers we plug into our
+laptop every few weeks, but they have been out of charge
+for a while. some beigh paint a little warped from the
+humidity but the sun seems to be breaking through the clouds
+anyways.
+</div>
+<div class="c-right" style="text-align: right">
+_"hello."_
+</div>
