@@ -4,7 +4,7 @@ link_text: "?"
 permalink: /about.html
 ---
 
-> i have nothing to say and i am saying it and that is poetry
+> i have nothing to say and i am saying it and that is poetry as i need it
 >
 > &mdash; <cite>john cage</cite>
 
