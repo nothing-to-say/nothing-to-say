@@ -20,5 +20,5 @@ donations. the entire site is built with open source (and
 mostly [Free](https://www.gnu.org/philosophy/free-sw.html)) software, and is,
 itself, [open source and Free]({{ site.source_url }}).
 
-if you would like to contribute, please reach get in touch by email at
+if you would like to contribute, please get in touch by email at
 [admin@nothing-to-say.org](mailto:admin@nothing-to-say.org)
