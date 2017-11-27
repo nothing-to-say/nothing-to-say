@@ -14,6 +14,17 @@
           "url": "mailto:andrewyoon2@gmail.com"
         }
       ]
+    },
+    {
+      "name": "gen tanaka",
+      "slug": "gen-tanaka",
+      "blurb": "makes music and erodes normativity to make way for estrangement",
+      "links": [
+        {
+          "name": "email",
+          "url": "mailto:gen.tanaka.music@gmail.com"
+        }
+      ]
     }
   ]
 }
