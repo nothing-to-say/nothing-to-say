@@ -21,4 +21,4 @@ mostly [Free](https://www.gnu.org/philosophy/free-sw.html)) software, and is,
 itself, [open source and Free]({{ site.source_url }}).
 
 if you would like to contribute, please get in touch by email at
-[admin@nothing-to-say.org](mailto:admin@nothing-to-say.org)
+[editors@nothing-to-say.org](mailto:editors@nothing-to-say.org)
