@@ -8,7 +8,7 @@ layout: default
 <ul class="contributors-list">
 
   {% for contributor in site.data.contributors.contributors %}
-    <li><p class="contributor-name">{{ contributor.name }}</p>
+    <li id="{{ contributor.slug }}"><p class="contributor-name">{{ contributor.name }}</p>
       <div class="contributor-details">
         {% if contributor.blurb %}
           <p>{{ contributor.blurb }}</p>
