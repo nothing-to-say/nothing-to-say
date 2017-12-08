@@ -25,6 +25,16 @@
           "url": "mailto:gen.tanaka.music@gmail.com"
         }
       ]
+    },
+    {
+      "name": "cat toren",
+      "slug": "cat-toren",
+      "links": [
+        {
+          "name": "website",
+          "url": "https://www.cattoren.com/"
+        }
+      ]
     }
   ]
 }
