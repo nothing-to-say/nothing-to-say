@@ -29,10 +29,15 @@
     {
       "name": "cat toren",
       "slug": "cat-toren",
+      "blurb": "makes music and sound to confront, heal, make beautiful",
       "links": [
         {
           "name": "website",
           "url": "https://www.cattoren.com/"
+        },
+        {
+          "name": "email",
+          "url": "mailto:cat_toren@hotmail.com"
         }
       ]
     }
