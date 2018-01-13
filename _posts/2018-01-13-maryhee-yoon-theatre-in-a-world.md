@@ -4,7 +4,8 @@ title: "theatre in a <s>broken</s> world"
 head_title: "theatre in a world"
 author: "maryhee yoon"
 author_slug: "maryhee-yoon"
-date: 2017-12-04
+date: 2018-01-13
+permalink: /maryhee-yoon/theatre-in-a-world.html
 ---
 
 <style>

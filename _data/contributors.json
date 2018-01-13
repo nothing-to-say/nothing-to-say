@@ -40,6 +40,17 @@
           "url": "mailto:cat_toren@hotmail.com"
         }
       ]
+    },
+    {
+      "name": "maryhee yoon",
+      "slug": "maryhee-yoon",
+      "blurb": "makes theatre and things with activist heart by necessity",
+      "links": [
+        {
+          "name": "email",
+          "url": "mailto:m.yoon38@gmail.com"
+        }
+      ]
     }
   ]
 }
