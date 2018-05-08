@@ -6,25 +6,29 @@ eval {
         }
     };
 
+    // Hack around lack of Set in ES5
+    remainingChoices = {
+        'painting': null,
+        'drawing': null,
+        'writing': null,
+        'composing': null,
+        'practicing': null,
+        'dancing': null,
+        'hacking': null,
+    };
+
     function haveYouBeen() {
-        let choices = [
-            'painting',
-            'drawing',
-            'writing',
-            'composing',
-            'practicing',
-            'dancing',
-        ];
-        let weightedChoices = [];
-        console.log(weightedChoose);
-        console.log(WeightedChoice);
+        var weightedChoices = [];
+        choices = Object.keys(remainingChoices);
         for (let i = 0; i < choices.length; i++) {
             weightedChoices.push(
                 new WeightedChoice(choices[i], 1)
             );
         }
-        return "have you been " +
-            weightedChoose(weightedChoices) + "?";
+        var choice = weightedChoose(weightedChoices);
+        // Prevent repetition
+        delete remainingChoices[choice];
+        return "have you been " + choice + "?";
     }
 }
 
@@ -32,25 +36,29 @@ begin
 
 there is a compassion in {{'questions', 'words'}}. some small change occurs in the wall on the other side of the room—it's a little more {{'lumpy', 'wiggly'}} now. we've said _"no"_, and the air has a sort of pink noise to it. our friend asks _"why not?"_ and we talk about how we have no energy after work and how we just haven't had any ideas lately and how we plan to get some good hours in on saturday. and can they blame us?
 
-every artist we've ever known has a job. some of their coworkers hear about this and say _i hear you used to be a painter!_ and it's a fun sort of get-to-know-you topic. it's like being korean, except korea doesn't exist and all the koreans are scattered across a country full of white people and nobody thinks asian is a real race. we wonder whether the best measure of an artist might be how much of a crisis they have when they're asked at work, _"so, what are your hobbies?"_ 
+<p class="have-you-been">The Starving Artist has starved. She had to get a job.</p>
 
-but when our friend asks that question, _{{call haveYouBeen}}_ we are taken out of this for a moment. we're reminded of what we're here for, and we feel guilty. we believe that feeling guilty is bad, but not feeling guilty is worse. our minds go to that idea we've been mulling over, that project we're putting off. we're just a little more likely to pick it back up. 
+every artist we've ever known has one. some of their coworkers hear about this and say, _i hear you used to be a painter!_ and it's a fun sort of get-to-know-you topic. it's like being korean, except korea doesn't exist and all the koreans are scattered across a country full of white people and nobody thinks asian is a real race. we wonder whether the best measure of an artist might be how much of a crisis they have when they're asked at work, _"so, what are your hobbies?"_ 
+
+but when our friend asks that question, _{{call haveYouBeen}}_ we are taken out of this for a moment. we're reminded of what we're here for, and we feel guilty. {{'we believe that feeling guilty is bad, but not feeling guilty is worse.', ''}} our minds go to that idea we've been mulling over, that project we're putting off, and we're just a little more likely to pick it back up. 
+
+let's stop pretending and start fighting back.
 
 <p class="have-you-been">{{call haveYouBeen}}</p>
 
-there is a compassion in accountability. effectively done, it is regular and comes from many directions. in this way, it has redundancy. that is to say, if one person in an accountability network slips away, not all is lost.
+there is a compassion in accountability. it holds us to ourselves and exposes our excuses. it offers a moment of clarity and self-awareness. it reminds us of who we are. effectively done, it is regular and comes from many directions. small, local groups are a compelling mechanism in this area: they are personal, they have redundancy, and at the same time they encourage growth and the sharing of ideas.
 
-how can we put ourselves and our peers in this kind of situation? we first search for a group that already exists. probably one of the best ways to search is just by asking friends if they know of anything. otherwise, the internet (e.g. [meetup.com](https://meetup.com/) or [local subreddits](https://www.reddit.com/subreddits)) can be a wonderful resource. reaching out to strangers involved in local art institutions (e.g. professors, grad student TAs, curators) can be surprisingly helpful. it can never hurt to ask.
+how can we put ourselves and our peers in this kind of situation? we first search for a group that already exists. probably one of the best ways to search is just by asking friends if they know of anything. otherwise, the internet (e.g. [meetup.com](https://meetup.com/) or [local subreddits](https://www.reddit.com/subreddits)) can be a rich resource. reaching out to strangers involved in local art institutions (e.g. professors, grad student TAs, curators) can be surprisingly helpful. it can never hurt to ask.
 
 failing this, we can form our own. it helps to do this with the help of another friend so that the two of us can hold each other accountable in seeding a larger group. an example that comes to mind is the [new york city emerging composers' collective](https://www.facebook.com/groups/852138918293863/), a recently formed group which meets every month to study music, read works in progress, and offers a platform for continual engagement with a peer group. the venue is usually someone's living room.
 
 <p class="have-you-been">{{call haveYouBeen}}</p>
 
-we believe smaller groups are generally more effective. it is {{'hard', 'difficult'}} to hide in a room {{'full', ''}} of six people. beyond 15 or 20 people, institutional overhead quickly becomes untenable and the situation is a lot less personal. we believe where possible, local groups which meet in person are almost always better since it's harder to ignore someone asking _{{call haveYouBeen}}_ face-to-face. 
+we believe smaller groups are generally more effective. it is {{'hard', 'difficult'}} to hide in a room {{'full', ''}} of six people. beyond 15 or 20 people, institutional overhead quickly becomes untenable and the situation is a lot less personal. we believe where possible, local groups which meet in person are almost always better since it's harder to ignore someone asking us, _{{call haveYouBeen}}_ to our face. 
 
 we recommend meeting on a regular cadence that is as frequent as possible while still allowing everyone to attend. meet every other day and most people will miss most meetings, making it easier to fall off. meet too infrequently and it becomes an afterthought. an ideal cadence might be something like every week or two, like a church, but it will depend entirely on who's involved. consistent scheduling is easier with a smaller group.
 
-we suggest not {{'segregating', 'isolating'}} accountability groups by discipline. of course, there's a lot of opportunity for technical growth with a group consisting of only poets, but we wonder if this might be a missed opportunity. an ideal group might have three members in each represented discipline, allowing for a healthy balance of targeted technical learning and lateral border blurring.
+we suggest not {{'segregating', 'isolating'}} accountability groups by discipline. of course, there's a lot of opportunity for technical growth with a group consisting of only poets, but we wonder if this might be a missed opportunity. an ideal group might have a couple members in each represented discipline, allowing for a healthy balance of targeted technical learning and lateral border blurring.
 
 it may be helpful for groups to have rotating leaders so that each individual has a greater degree of ownership over the project. the founder of a group moving away does not need to mean the group dissolves, just another chair to invite someone else to.
 
@@ -60,7 +68,13 @@ effective accountability is individual and requires follow-up. we suggest keepin
 
 for the same reason that in-person accountability is often more effective, when keeping in touch with peers who live far away, phone calls tend to be more useful than short text messages. it's difficult to dig very deep in bite-sized messages. we've found email to be a great medium for in-depth discussions, but their async nature means it's very easy to procrastinate on responding.
 
-there is a compassion in structure. these little questions, discussions, meetings, and follow-ups can help us stay self-aware and provide defense against stagnation. the old romantic idea of The Starving Artist would have us believe we should just be so determined to make our voices heard that no amount of distraction or energy-sapping work could deter us, but the realities of 21st century life put this to bed. we need help, and our peers do too. and so we suggest we all think of the people we love and ask them, 
+<br/>
+
+---
+
+<br/>
+
+these little questions, discussions, meetings, and follow-ups can help us stay self-aware and provide defense against stagnation. the old romantic idea of The Starving Artist would have us believe we should just be so determined to make our voices heard that no amount of distraction or energy-sapping work could deter us, but the realities of 21st century life put this to bed. we need help, and our friends do too. and so we suggest we all think of the people we love and ask them, 
 
 <p class="have-you-been">{{call haveYouBeen}}</p>
 
