@@ -6,24 +6,25 @@
      return Math.floor(Math.random() * (max - min)) + min;
  }
 
- function randomSvgLine(minStartY, maxStartY, minEndY, maxEndY, lineColor) {
+ function randomSvgLine(minStartY, maxStartY, minDeltaY, maxDeltaY, lineColor) {
+   let yStartPct = randomFloat(minStartY, maxStartY);
+   let yEndPct = yStartPct + randomFloat(minDeltaY, maxDeltaY);
    return '<line stroke="' + lineColor + '" '
         + 'stroke-width="1" vector-effect="non-scaling-stroke" '
-        + 'x1="0" x2="100%" y1="' + randomFloat(minStartY, maxStartY) + '" '
-        + 'y2="' + randomFloat(minEndY, maxEndY) + '" />';
+        + 'x1="0" x2="100%" y1="' + yStartPct + '%" '
+        + 'y2="' + yEndPct + '%" />';
  }
 
  function createBackgroundSvg(backgroundColor, lineColor) {
-   let numLines = Math.floor(randomFloat(0, 13));
-   console.log(numLines);
+   let numLines = Math.floor(randomFloat(0, 300));
    let lineStrings = [];
    for (var i = 0; i < numLines; i++) {
-     let factor = i + randomFloat(0.1, 0.7);
+     let factor = i / numLines;
      lineStrings.push(
-       randomSvgLine(factor * 10,
+       randomSvgLine(factor * 20,
+                     factor * 100,
                      factor * 50,
-                     factor * 60,
-                     factor * 110,
+                     factor * 100,
                      lineColor));
    }
    return '<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 1620 1280" '
